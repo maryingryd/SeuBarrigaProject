@@ -12,11 +12,17 @@ public class LoginPageSrBarriga {
         
         this.driver = driver;        
     }
-    
-    public WebElement getLogoText() {
-        
-        return driver.findElement(By.className("login_logo"));
+    //Campo E-mail
+    public WebElement getEmailInput() {     
+        return driver.findElement(By.id("email"));
     }
-    
+    //Campo Senha
+    public WebElement getPasswordInput() { 
+        return driver.findElement(By.id("senha"));
+    }
+  //Botão Entrar
+    public WebElement getLoginButton() { 
+        return driver.findElement(By.className("btn btn-primary"));
+    }
     
 }
