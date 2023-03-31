@@ -35,7 +35,13 @@ public class MonthlySummaryPageSrBarriga {
     public WebElement getListYear2023Input() {
         return driver.findElement(By.xpath("select[@id='ano']/option[@value='2023']"));
     }
-    
-    // parei no buton buscar.
+    //Botão Buscar
+    public WebElement getButtonBuscarInput() {
+        return driver.findElement(By.xpath("input[@value='Buscar']"));
+    }
+    //Campo Tipo de Conta Despesa
+    public WebElement getDescriptionDespesaInput() {
+        return driver.findElement(By.xpath("tbody/tr[1]/td[3]"));
+    }
     
 }
