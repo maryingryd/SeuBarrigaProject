@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import Framework.Browser.Waits;
 
 public class LoginPage {
-	// https://seubarriga.wcaquino.me/login
+	
 	private WebDriver driver;
 	private Waits wait;
 

@@ -52,15 +52,4 @@ public class GenericValidation {
 
 	}
 
-	/*
-	 * public void validationProduto() { try {
-	 * 
-	 * Assertions.assertTrue(genericPage.getProdutoLabel().isDisplayed());
-	 * Report.log(Status.PASS, "O produto selecionado esta correto",
-	 * Screenshot.captureBase64(driver)); }catch (Exception e) {
-	 * Report.log(Status.FAIL, e.getMessage(), Screenshot.captureBase64(driver)); }
-	 * 
-	 * 
-	 * }
-	 */
 }

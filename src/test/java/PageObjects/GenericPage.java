@@ -28,7 +28,7 @@ public class GenericPage {
 				By.xpath("//div[@id='bs-example-navbar-collapse-1']/ul/li[@class='active']/a[text()='Novo usuário?']"));
 	}
 
-	// Espera carregar pagina
+	// Logo Seu Barriga
 	public WebElement getSeuBarrigaLogo() {
 		return wait.visibilityOfElement(By.xpath("//div[@class='navbar-header']/a"));
 	}

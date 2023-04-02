@@ -20,50 +20,42 @@ import Framework.Utils.CreateFolder;
 import Framework.Utils.DateTime;
 
 public class Screenshot {
-    
-    private static final String PATH_SCREENSHOT = ReportFactory.PATH_REPORT + 
-            File.separator + "Screenshot";
-    
-    public static Media capture(WebDriver driver) {
-        
-        try {
-            
-            CreateFolder.createFolderReport(PATH_SCREENSHOT);
-            File scrshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-            String screenshot = PATH_SCREENSHOT +File.separator + 
-                    "Image_" + DateTime.getDateTimeFormatScreenshot();
-            FileUtils.copyFile(scrshot, new File(screenshot));
-            return MediaEntityBuilder.createScreenCaptureFromPath(screenshot).build();
-            
-        }catch (Exception e) {
-            String message = "Ocorreu um erro ao capturar a tela" + e.getMessage();
-        }  
-        
-        return null;
-    }
-    
-    public static Media captureBase64(WebDriver driver) {
-        
-        
-        try {
-            
-            PageSnapshot screenshot = Shutterbug.shootPage(driver);
-            ByteArrayOutputStream stream = new ByteArrayOutputStream();
-            ImageIO.write(screenshot.getImage(), "png", stream);
-            String base64Image = Base64.encodeBase64String(stream.toByteArray());
-            return MediaEntityBuilder.createScreenCaptureFromBase64String(base64Image).build();
-            
-            
-        }catch (Exception e) {
-            
-            String message = "Ocorreu um erro ao capturar a tela" + e.getMessage();
-        }
-        
-        return null;
-    }
-    
-    
-    
-    
+
+	private static final String PATH_SCREENSHOT = ReportFactory.PATH_REPORT + File.separator + "Screenshot";
+
+	public static Media capture(WebDriver driver) {
+
+		try {
+
+			CreateFolder.createFolderReport(PATH_SCREENSHOT);
+			File scrshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			String screenshot = PATH_SCREENSHOT + File.separator + "Image_" + DateTime.getDateTimeFormatScreenshot();
+			FileUtils.copyFile(scrshot, new File(screenshot));
+			return MediaEntityBuilder.createScreenCaptureFromPath(screenshot).build();
+
+		} catch (Exception e) {
+			String message = "Ocorreu um erro ao capturar a tela" + e.getMessage();
+		}
+
+		return null;
+	}
+
+	public static Media captureBase64(WebDriver driver) {
+
+		try {
+
+			PageSnapshot screenshot = Shutterbug.shootPage(driver);
+			ByteArrayOutputStream stream = new ByteArrayOutputStream();
+			ImageIO.write(screenshot.getImage(), "png", stream);
+			String base64Image = Base64.encodeBase64String(stream.toByteArray());
+			return MediaEntityBuilder.createScreenCaptureFromBase64String(base64Image).build();
+
+		} catch (Exception e) {
+
+			String message = "Ocorreu um erro ao capturar a tela" + e.getMessage();
+		}
+
+		return null;
+	}
 
 }

@@ -10,7 +10,7 @@ public class FakersGeneration {
 	private String emailAndress;
 	private String fullName;
 	private String password;
-	
+
 	public FakersGeneration() {
 		faker = new Faker(new Locale("pt-BR"));
 	}
@@ -24,11 +24,10 @@ public class FakersGeneration {
 		emailAndress = faker.internet().emailAddress();
 		return emailAndress;
 	}
-	
+
 	public String getPassword() {
 		password = faker.internet().password();
 		return password;
 	}
-	
 
 }

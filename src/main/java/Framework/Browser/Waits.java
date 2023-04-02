@@ -10,29 +10,29 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Waits {
-    
-    private WebDriver driver;
-    
-    public Waits(WebDriver driver) {
-        
-        this.driver=driver;
-    }
-    
-    public WebElement visibilityOfElement(By by) {
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
-    }
-    
-    public WebElement loadElement(WebElement element) {
-        
-        try {
-          
-            return new WebDriverWait(driver,Duration.ofSeconds(90)).until(ExpectedConditions.visibilityOf(element));
-        
-        }catch (WebDriverException e) {
-           
-            return element;
-        }
-    }
+
+	private WebDriver driver;
+
+	public Waits(WebDriver driver) {
+
+		this.driver = driver;
+	}
+
+	public WebElement visibilityOfElement(By by) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+	}
+
+	public WebElement loadElement(WebElement element) {
+
+		try {
+
+			return new WebDriverWait(driver, Duration.ofSeconds(60)).until(ExpectedConditions.visibilityOf(element));
+
+		} catch (WebDriverException e) {
+
+			return element;
+		}
+	}
 
 }

@@ -21,7 +21,7 @@ public class NewUserValidation {
 		String url = driver.getCurrentUrl();
 		try {
 			Assertions.assertEquals(url, "https://seubarriga.wcaquino.me/cadastro");
-			Report.log(Status.PASS, "Acessou a página de Login corretamente", Screenshot.captureBase64(driver));
+			Report.log(Status.PASS, "Acessou a página de cadastro corretamente", Screenshot.captureBase64(driver));
 
 		} catch (Exception e) {
 			System.out.println("NewUserValidation - validationNewUserPage - Ocorreu um erro, verificar log de erros.");
