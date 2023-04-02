@@ -18,4 +18,9 @@ public class HomePage {
 		return driver.findElement(By.xpath("//div[@class='navbar-collapse']/ul/li[@class='active']/a"));
 	}
 
+	// Texto Home
+	public WebElement getTextHomeInput() {
+		return driver.findElement(By.xpath("//body/footer/span"));
+	}
+
 }

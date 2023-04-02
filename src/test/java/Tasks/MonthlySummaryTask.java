@@ -21,7 +21,7 @@ public class MonthlySummaryTask {
 
 	public void monthlySummaryCheck() {
 		monthySummaryPage.getNavMonthlySummaryInput().click();
-		monthySummaryPage.getListMonthInput().click();;
+		monthySummaryPage.getListMonthInput().click();
 		monthySummaryPage.getListMonthJanuaryInput().click();
 		monthySummaryPage.getListYearInput().click();
 		monthySummaryPage.getListYear2023Input().click();
@@ -30,8 +30,7 @@ public class MonthlySummaryTask {
 		monthlySummaryValidation.validationRevenueInsertion();
 		monthlySummaryValidation.validationExpenseInsertion();
 		monthySummaryPage.getNavLogoutInput().click();
-		
-		
-		}
+
+	}
 
 }

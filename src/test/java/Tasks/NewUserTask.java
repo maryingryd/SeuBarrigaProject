@@ -17,7 +17,7 @@ public class NewUserTask {
 	private FakersGeneration fakersGeneration;
 	private LoginPage loginPage;
 	private Waits wait;
-	
+
 	public NewUserTask(WebDriver driver) {
 		this.driver = driver;
 		wait = new Waits(this.driver);
@@ -27,15 +27,16 @@ public class NewUserTask {
 		new GenericValidation(this.driver);
 		fakersGeneration = new FakersGeneration();
 	}
-	//Metodo preencher cadastro
+
+	// Metodo preencher cadastro
 	public void occupyRegistrer() {
 		newUserPage.getMenuNewUserInput();
 		newUserPage.getMenuNewUserInput().click();
-		newUserValidation.validationNewUserPage(); 
+		newUserValidation.validationNewUserPage();
 		newUserPage.getEmailInput().click();
 		String name = fakersGeneration.getFullName();
-		String email= fakersGeneration.getEmailAddress();
-		String password= fakersGeneration.getPassword();
+		String email = fakersGeneration.getEmailAddress();
+		String password = fakersGeneration.getPassword();
 		FileOperation.setProperties("form", "name", name);
 		FileOperation.setProperties("form", "email", email);
 		FileOperation.setProperties("form", "password", password);
@@ -45,7 +46,7 @@ public class NewUserTask {
 		newUserPage.getRegistrerButton().click();
 		newUserValidation.successfullyRegisteredUser();
 		wait.loadElement(loginPage.getEmailInput());
-		
+
 	}
 
 }

@@ -10,6 +10,7 @@ public class GenericPage {
 
 	private WebDriver driver;
 	private Waits wait;
+
 	public GenericPage(WebDriver driver) {
 
 		this.driver = driver;

@@ -16,7 +16,8 @@ public class NewUserPage {
 	// Aba Novo Usuário?
 
 	public WebElement getMenuNewUserInput() {
-		return driver.findElement(By.xpath("//div[@id='bs-example-navbar-collapse-1']/ul/li/a[text()='Novo usuário?']"));
+		return driver
+				.findElement(By.xpath("//div[@id='bs-example-navbar-collapse-1']/ul/li/a[text()='Novo usuário?']"));
 	}
 
 	// Campo Nome
@@ -39,9 +40,9 @@ public class NewUserPage {
 		return driver.findElement(By.xpath("//div[@class='jumbotron col-lg-4']/form/input[@value='Cadastrar']"));
 	}
 
-	// Mensagem Usuario Cadastrado com Sucesso	
+	// Mensagem Usuario Cadastrado com Sucesso
 	public WebElement getSuccessFullyRegisteredUser() {
 		return driver.findElement(By.xpath("//body[@class='body-index']/div[@class='alert alert-success']"));
 	}
-	
+
 }

@@ -12,7 +12,6 @@ public class MovementValidation {
 
 	private WebDriver driver;
 	private MovementPage movementPage;
-	
 
 	public MovementValidation(WebDriver driver) {
 		this.driver = driver;
@@ -36,7 +35,7 @@ public class MovementValidation {
 	public void successfullyAddMovement() {
 		String label = movementPage.getsuccessfullyAddMovementInput().getText();
 		try {
-			Assertions.assertEquals(label,"Movimentação adicionada com sucesso!");
+			Assertions.assertEquals(label, "Movimentação adicionada com sucesso!");
 			Report.log(Status.PASS, "Movimentação Criada com Sucesso", Screenshot.captureBase64(driver));
 		} catch (Exception e) {
 			System.out

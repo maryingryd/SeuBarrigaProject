@@ -22,11 +22,12 @@ public class AddAccountPage {
 	public WebElement getCountDropDownAddInput() {
 		return driver.findElement(By.xpath("//ul[@class='dropdown-menu']/li[1]/a"));
 	}
-	
+
 	// Campo Nome da Conta
 	public WebElement getNameofCountInput() {
 		return driver.findElement(By.xpath("//div/input[@id='nome']"));
 	}
+
 	// Dropdown Contas Listar
 	public WebElement getCountDropDownListInput() {
 		return driver.findElement(By.xpath("//ul[@class='dropdown-menu']/li[2]/a"));
@@ -37,5 +38,9 @@ public class AddAccountPage {
 		return driver.findElement(By.xpath("//div[@class='btn-group']/button"));
 	}
 
+	// Alert Sucesso
+	public WebElement getAccountSucessInput() {
+		return driver.findElement(By.xpath("//div[text()='Conta adicionada com sucesso!']"));
+	}
 
 }
