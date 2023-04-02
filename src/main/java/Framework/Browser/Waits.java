@@ -27,7 +27,7 @@ public class Waits {
         
         try {
           
-            return new WebDriverWait(driver,Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOf(element));
+            return new WebDriverWait(driver,Duration.ofSeconds(90)).until(ExpectedConditions.visibilityOf(element));
         
         }catch (WebDriverException e) {
            
