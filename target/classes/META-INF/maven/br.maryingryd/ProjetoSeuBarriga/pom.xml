@@ -42,13 +42,6 @@
 		<artifactId>selenium-shutterbug</artifactId>
 		<version>1.6</version>
 	</dependency>
-
-	<dependency>
-		<groupId>demo</groupId>
-		<artifactId>sauce</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-	</dependency>
   </dependencies>
-  
-  
+
  </project>
